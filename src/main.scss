@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/**
+  * Import order:
+  *  1. Vendor (3rd-party) styles
+  *  2. Base styles (reset, typography, base styles)
+  *  3. Layout styles (grids, containers, etc...)
+  *  4. Component styles (forms, buttons, hero, icons, etc...)
+  *  5. Page styles (optional override rules for specific pages)
+  *  6. Theme styles (theme variant modifications)
+  */
+
+/** @use "vendors/<vendor> */
+
+@use "base";
+@use "layout";
+@use "components";
+@use "pages";
+
+/** @use "theme/default" */

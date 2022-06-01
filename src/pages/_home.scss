@@ -1,0 +1,9 @@
+@use "sass:map" as map;
+@use "../abstract/mixins" as *;
+@use "../abstract/spacings" as *;
+
+.page__home .container {
+  @include media-up {
+    padding-top: map.get($spacings, 8);
+  }
+}

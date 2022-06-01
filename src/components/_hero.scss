@@ -1,0 +1,51 @@
+@use "sass:color" as color;
+@use "sass:map" as map;
+
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/placeholders" as *;
+@use "../abstract/spacings" as *;
+
+.hero {
+  @extend %flex;
+
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: $clr-primary;
+  color: $clr-secondary;
+  padding: map.get($spacings, 7);
+
+  @include media-up("md") {
+    margin: 0 auto;
+    max-width: map.get($breakpoints, "md");
+    box-shadow: 4px 4px 8px rgba(0 0 0 / 10%);
+    border-radius: 0.5rem;
+  }
+
+  & > * + * {
+    margin-top: map.get($spacings, 7);
+  }
+}
+
+.hero a:not([class]) {
+  color: $clr-accent;
+
+  &:hover {
+    border-bottom: 2px solid $clr-accent;
+  }
+}
+
+.hero__cta {
+  background-color: $clr-accent;
+  color: color.adjust($clr-accent, $lightness: -40%);
+  font-weight: bold;
+  padding: map.get($spacings, 3);
+  letter-spacing: 0.05rem;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: color.adjust($clr-accent, $lightness: -5%);
+  }
+}
