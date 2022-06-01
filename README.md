@@ -1,6 +1,6 @@
 # Sass Build Starter Template
 
-This starter template frames out a modular Sass build environment based on architectdure recommendations from the [Sass Guidelines](https://sass-guidelin.es/). These recommendations are an extension of [SMACSS](http://smacss.com/).
+This starter template frames out a modular Sass build environment based on architecture recommendations from the [Sass Guidelines](https://sass-guidelin.es/). These recommendations are an extension of [SMACSS](http://smacss.com/).
 
 ## Recommended VS Code Extensions
 
