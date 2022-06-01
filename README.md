@@ -22,9 +22,9 @@ These steps will allow you to jump right in and fire up the dev server.
 3. Run `npm run dev`
 
 A browser instance should automatically open, but if not, you can access
-the live server at http://localhost:3000.
+the live server at [http://localhost:3000](http://localhost:3000).
 
-## Commands
+## Other Commands
 
 * `npm run build` will build your production-ready stylesheet to the `dist` directory.
 * `npm run lint` will check your code for code style and best practices.
