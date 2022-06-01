@@ -1,0 +1,35 @@
+{
+  "name": "sass-build-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src:dist",
+    "dev": "run-p scss *:dev",
+    "lint": "stylelint \"src/**/*.scss\"",
+    "lint:fix": "stylelint \"src/**/*.scss\" --fix",
+    "scss": "sass src:public/css",
+    "scss:dev": "sass --watch src:public/css",
+    "server": "vite public",
+    "server:dev": "vite public --open",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lint-staged": "^13.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-scss": "^4.0.4",
+    "prettier": "^2.6.2",
+    "sass": "^1.52.1",
+    "stylelint": "^14.8.5",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "vite": "^2.9.9",
+    "husky": "^7.0.0"
+  },
+  "lint-staged": {
+    "*.scss": "stylelint --fix"
+  }
+}
