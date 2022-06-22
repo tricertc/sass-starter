@@ -1,0 +1,28 @@
+@use "sass:map" as map;
+@use "sass:math" as math;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-width: map.get($breakpoints, lg);
+
+$spacing-base: 1rem;
+$spacing-ratio: 1.5;
+
+$spacings: (
+  1: math.div($spacing-base, math.pow($spacing-ratio, 3)),
+  2: math.div($spacing-base, math.pow($spacing-ratio, 2)),
+  3: math.div($spacing-base, math.pow($spacing-ratio, 1)),
+  4: $spacing-base,
+  5: calc($spacing-base * math.pow($spacing-ratio, 1)),
+  6: calc($spacing-base * math.pow($spacing-ratio, 2)),
+  7: calc($spacing-base * math.pow($spacing-ratio, 3)),
+  8: calc($spacing-base * math.pow($spacing-ratio, 4)),
+  9: calc($spacing-base * math.pow($spacing-ratio, 5)),
+  10: calc($spacing-base * math.pow($spacing-ratio, 6)),
+);

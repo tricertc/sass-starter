@@ -1,5 +1,0 @@
-@use "sass:color" as color;
-
-$clr-primary: color.adjust(black, $lightness: 25%);
-$clr-secondary: color.adjust($clr-primary, $lightness: 75%);
-$clr-accent: #ffc107;

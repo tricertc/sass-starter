@@ -1,0 +1,6 @@
+@use "sass:map" as map;
+@use "variables" as *;
+
+@function spacing($step) {
+  @return map.get($spacings, $step);
+}

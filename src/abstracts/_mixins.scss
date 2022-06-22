@@ -1,7 +1,7 @@
 @use "sass:map" as map;
-@use "breakpoints" as *;
+@use "variables" as *;
 
-@mixin media-up($size: "md") {
+@mixin media-up($size: md) {
   $breakpoint: map.get($breakpoints, $size);
 
   @media screen and (min-width: $breakpoint) {
